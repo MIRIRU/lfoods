@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/onsenui/js/onsenui.min.js"></script>
+    <script src="lib/onsenui/js/angular-onsenui.min.js"></script>
+
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+        <!--
+        function sign_up() {
+
+            var ncmb = new NCMB("167bd3889ca618ceeb77581e5e7fa5091a6baed87d3d9b290d09cd2c8adadedb", "f2c9c6289d0b4af55423947670269e2861c3905b5f7b324e059291da05992ffe");
+            var user = new ncmb.User();
+            user.set("userName", document.getElementById("user_nameBox1").value)
+                .set("userId", document.getElementById("user_idBox1").value)
+                .set("password", document.getElementById("passwordBox1").value)
+            // 新規登録
+            user.signUpByAccount()
+                .then(function () {
+                    // 登録後処理
+                })
+                .catch(function (err) {
+                    // エラー処理
+                });
+        }
+        //-->
+    </script>
+
+    <script type="text/javascript">
+        <!--
+        function Login() {
+
+            var user = new ncmb.User({ userName: document.getElementById("user_idBox").value, password: document.getElementById("passwordBox").value });
+            ncmb.User.login(user)
+                .then(function (data) {
+                    console.log("ログインできました");
+                })
+                .catch(function (err) {
+                    // エラー処理
+                    console.log("ログインできませんでした");
+                })
+        };
+
+            //-->
+    </script>
+
+    <script>
+        ons.bootstrap()
+          .controller('AppController', function($scope) {
+            $scope.load = function(page) {
+              $scope.mySplitterContent.load(page)
+            }
+            $scope.open = function() {
+              $scope.mySplitterSide.open();
+            }
+          });
+        ons.ready(function() {
+            console.log("Onsen UI is ready!");
+        });
+    </script>
+    <script>
+// APIキーの設定とSDK初期化
+        var ncmb = new NCMB("167bd3889ca618ceeb77581e5e7fa5091a6baed87d3d9b290d09cd2c8adadedb", "f2c9c6289d0b4af55423947670269e2861c3905b5f7b324e059291da05992ffe");
+// ↓　ここにサンプルコードを実装　↓
+
+        // 保存先クラスの作成
+        var testClass = ncmb.DataStore("TestClass");
+
+        // 保存先クラスのインスタンスを生成
+        var testClass = new TestClass();
+
+        // 値を設定と保存
+        testClass.set("message", "元気やで")
+                 .save()
+                 .then(function (object) {
+                     // 保存に成功した場合の処理
+
+                 })
+                 .catch(function (err) {
+                     // 保存に失敗した場合の処理
+
+                 });
+
+    </script>
+
+</head>
+<body ng-controller="AppController as app">
+    <ons-splitter>
+        <ons-splitter-side var="mySplitterSide" side="left" width="220px" collapse swipeable>
+            <ons-page>
+                <ons-list>
+                    <ons-list-item ng-click="load('home.html')" tappable>
+                        Home
+                    </ons-list-item>
+                    <ons-list-item ng-click="load('settings.html')" tappable>
+                        Settings
+                    </ons-list-item>
+                    <ons-list-item ng-click="load('about.html')" tappable>
+                        About
+                    </ons-list-item>
+                </ons-list>
+            </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content var="mySplitterContent" page="home.html"></ons-splitter-content>
+    </ons-splitter>
+
+    <ons-template id="home.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Main
+                </div>
+            </ons-toolbar>
+            <h1>ログイン</h1>
+            <hr>
+            <div align="center">
+                <table border="0">
+
+                    <form name="form1" id="id_form1" action="">
+                        <tr>
+
+                            <th>
+                                ユーザID
+
+                            </th>
+
+                            <td>
+                                <input type="text" id="user_idBox" name="user_id" value="" size="24">
+
+                            </td>
+
+                        </tr>                   <tr>
+                            <th>
+                                パスワード
+
+                            </th>
+                            <td>
+                                <input type="password" id="passwordBox" name="password" value="" size="24">
+
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" onclick="Login()" value="ログイン">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+
+            <h1>新規登録</h1>
+            <hr>
+            <div align="center">
+                <table border="0">
+
+                    <form name="form1" id="id_form2" action="">
+                        <tr>
+                            <th>
+                                ユーザー名
+
+                            </th>
+
+                            <td>
+                                <input type="text" id="user_nameBox1" name="user_name" value="" size="24">
+
+                            </td>
+
+                        </tr>
+                        <th>
+                            ユーザID
+
+                        </th>
+
+                        <td>
+                            <input type="text" id="user_idBox1" name="user_id" value="" size="24">
+
+                        </td>
+
+                        </tr>                   <tr>
+                            <th>
+                                パスワード
+
+                            </th>
+                            <td>
+                                <input type="password" id="passwordBox1" name="password" value="" size="24">
+
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" onclick="sign_up()" value="新規登録">
+                            </td>
+                            <td colspan="2">
+                                <a href="./recipePosting.html">page1.htmlに移動します</a>
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+        </ons-page>
+    </ons-template>
+
+    <ons-template id="settings.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Settings
+                </div>
+            </ons-toolbar>
+            <div class="login-body">
+                <article class="container-login center-block">
+                    <section>
+                        <ul id="top-bar" class="nav nav-tabs nav-justified">
+                            <li class="active"><a href="#" data-target="#login-access" data-toggle="tab">Accesso</a></li>
+                            <li><a href="#" data-target="#password-access" data-toggle="tab">Password dimenticata</a></li>
+                        </ul>
+                        <div class="tab-content tabs-login col-lg-12 col-md-12 col-sm-12 cols-xs-12">
+                            <div id="login-access" class="tab-pane fade active in">
+                                <h2><i class="glyphicon glyphicon-log-in"></i> Accesso</h2>
+                                <form method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal">
+                                    <div class="form-group ">
+                                        <label for="login" class="sr-only">Email</label>
+                                        <input type="text" class="form-control" name="login" id="login_value"
+                                               placeholder="Email" tabindex="1" value="" />
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="password" class="sr-only">Password</label>
+                                        <input type="password" class="form-control" name="password" id="password"
+                                               placeholder="Password" value="" tabindex="2" />
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="control-label" for="remember_me">
+                                            <input type="checkbox" name="remember_me" id="remember_me" value="1" class="" tabindex="3" /> Ricordami
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <div class="form-group ">
+                                        <button type="submit" name="log-me-in" id="submit" tabindex="5" class="btn btn-lg btn-primary">Entra</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="password-access" name="password-access" class="tab-pane fade">
+                                <h2><i class="glyphicon glyphicon-lock"></i> Password Dimenticata</h2>
+                                <form method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label type="text" class="sr-only" for="password-reset">Email Address</label>
+                                        <input name="password-reset" id="password-reset" class="form-control" placeholder="Email Address" value="" tabindex="6">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" name="password-reset-button" id="submit" tabindex="7" class="btn btn-lg btn-success">Reset Password</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </ons-page>
+    </ons-template>
+
+    <ons-template id="about.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    About
+                </div>
+            </ons-toolbar>
+        </ons-page>
+    </ons-template>
+
+</body>
+</html>
