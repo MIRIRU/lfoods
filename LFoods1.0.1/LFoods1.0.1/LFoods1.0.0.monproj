@@ -63,7 +63,7 @@
     <Content Include="config.xml">
       <type>file</type>
       <deletable>True</deletable>
-      <hash>fdfb8074</hash>
+      <hash>5cfb9f43</hash>
       <icon>
       </icon>
       <mime>text/xml</mime>
@@ -72,8 +72,7 @@
       <path>/config.xml</path>
       <remark>
       </remark>
-      <lastModified>
-      </lastModified>
+      <lastModified>636135174064620791</lastModified>
     </Content>
     <Content Include="res\android\icon\hdpi.png">
       <type>file</type>
@@ -858,7 +857,7 @@
     <Content Include="www\css\style.css">
       <type>file</type>
       <deletable>True</deletable>
-      <hash>2aed6ef6</hash>
+      <hash>00000000</hash>
       <icon>
       </icon>
       <mime>text/css</mime>
@@ -867,13 +866,12 @@
       <path>/www/css/style.css</path>
       <remark>
       </remark>
-      <lastModified>
-      </lastModified>
+      <lastModified>636135577572612648</lastModified>
     </Content>
     <Content Include="www\index.html">
       <type>file</type>
       <deletable>True</deletable>
-      <hash>ae59deec</hash>
+      <hash>856c9560</hash>
       <icon>
       </icon>
       <mime>text/html</mime>
@@ -882,8 +880,39 @@
       <path>/www/index.html</path>
       <remark>
       </remark>
-      <lastModified>
-      </lastModified>
+      <lastModified>636135595118017264</lastModified>
+    </Content>
+    <Content Include="www\js\app.js">
+      <SubType>Content</SubType>
+      <type>file</type>
+      <deletable>true</deletable>
+      <hash>f749fd4a</hash>
+      <icon>
+      </icon>
+      <mime>
+      </mime>
+      <os>
+      </os>
+      <path>/www/js/app.js</path>
+      <remark>
+      </remark>
+      <lastModified>636135248546746827</lastModified>
+    </Content>
+    <Content Include="www\js\topmenu.js">
+      <SubType>Content</SubType>
+      <type>file</type>
+      <deletable>true</deletable>
+      <hash>f749fd4a</hash>
+      <icon>
+      </icon>
+      <mime>
+      </mime>
+      <os>
+      </os>
+      <path>/www/js/topmenu.js</path>
+      <remark>
+      </remark>
+      <lastModified>636135226229487679</lastModified>
     </Content>
     <Content Include="www\lib\angular\angular-animate.js">
       <type>file</type>
@@ -2355,6 +2384,86 @@
       <lastModified>
       </lastModified>
     </Content>
+    <Content Include="www\pages\category.html">
+      <SubType>Content</SubType>
+      <type>file</type>
+      <deletable>true</deletable>
+      <hash>54ad38cb</hash>
+      <icon>
+      </icon>
+      <mime>
+      </mime>
+      <os>
+      </os>
+      <path>/www/pages/category.html</path>
+      <remark>
+      </remark>
+      <lastModified>636135183237258690</lastModified>
+    </Content>
+    <Content Include="www\pages\information.html">
+      <SubType>Content</SubType>
+      <type>file</type>
+      <deletable>true</deletable>
+      <hash>e4b489d9</hash>
+      <icon>
+      </icon>
+      <mime>
+      </mime>
+      <os>
+      </os>
+      <path>/www/pages/information.html</path>
+      <remark>
+      </remark>
+      <lastModified>636135183406638934</lastModified>
+    </Content>
+    <Content Include="www\pages\markets.html">
+      <SubType>Content</SubType>
+      <type>file</type>
+      <deletable>true</deletable>
+      <hash>50894452</hash>
+      <icon>
+      </icon>
+      <mime>
+      </mime>
+      <os>
+      </os>
+      <path>/www/pages/markets.html</path>
+      <remark>
+      </remark>
+      <lastModified>636135183694380484</lastModified>
+    </Content>
+    <Content Include="www\pages\newrecipe.html">
+      <SubType>Content</SubType>
+      <type>file</type>
+      <deletable>true</deletable>
+      <hash>da761e79</hash>
+      <icon>
+      </icon>
+      <mime>
+      </mime>
+      <os>
+      </os>
+      <path>/www/pages/newrecipe.html</path>
+      <remark>
+      </remark>
+      <lastModified>636135183544107239</lastModified>
+    </Content>
+    <Content Include="www\pages\topmenu.html">
+      <SubType>Content</SubType>
+      <type>file</type>
+      <deletable>true</deletable>
+      <hash>0c1fd240</hash>
+      <icon>
+      </icon>
+      <mime>
+      </mime>
+      <os>
+      </os>
+      <path>/www/pages/topmenu.html</path>
+      <remark>
+      </remark>
+      <lastModified>636135183255699404</lastModified>
+    </Content>
     <Content Include="www\README.md">
       <type>file</type>
       <deletable>True</deletable>
@@ -2910,6 +3019,34 @@
       </remark>
       <lastModified>
       </lastModified>
+    </Folder>
+    <Folder Include="www\js">
+      <type>dir</type>
+      <deletable>true</deletable>
+      <hash>RENAMED</hash>
+      <icon>
+      </icon>
+      <mime>
+      </mime>
+      <os>
+      </os>
+      <path>/www/js</path>
+      <remark>
+      </remark>
+    </Folder>
+    <Folder Include="www\pages">
+      <type>dir</type>
+      <deletable>true</deletable>
+      <hash>RENAMED</hash>
+      <icon>
+      </icon>
+      <mime>
+      </mime>
+      <os>
+      </os>
+      <path>/www/pages</path>
+      <remark>
+      </remark>
     </Folder>
   </ItemGroup>
   <Target Name="Build" />
