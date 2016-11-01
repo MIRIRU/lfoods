@@ -63,7 +63,7 @@
     <Content Include="config.xml">
       <type>file</type>
       <deletable>True</deletable>
-      <hash>5cfb9f43</hash>
+      <hash>ec3ac174</hash>
       <icon>
       </icon>
       <mime>text/xml</mime>
@@ -72,7 +72,7 @@
       <path>/config.xml</path>
       <remark>
       </remark>
-      <lastModified>636135174064620791</lastModified>
+      <lastModified>636136342318650928</lastModified>
     </Content>
     <Content Include="res\android\icon\hdpi.png">
       <type>file</type>
@@ -857,7 +857,7 @@
     <Content Include="www\css\style.css">
       <type>file</type>
       <deletable>True</deletable>
-      <hash>00000000</hash>
+      <hash>eeeb341c</hash>
       <icon>
       </icon>
       <mime>text/css</mime>
@@ -866,12 +866,12 @@
       <path>/www/css/style.css</path>
       <remark>
       </remark>
-      <lastModified>636135577572612648</lastModified>
+      <lastModified>636135939846225202</lastModified>
     </Content>
     <Content Include="www\index.html">
       <type>file</type>
       <deletable>True</deletable>
-      <hash>856c9560</hash>
+      <hash>deb8f751</hash>
       <icon>
       </icon>
       <mime>text/html</mime>
@@ -880,13 +880,13 @@
       <path>/www/index.html</path>
       <remark>
       </remark>
-      <lastModified>636135595118017264</lastModified>
+      <lastModified>636135942007966406</lastModified>
     </Content>
     <Content Include="www\js\app.js">
       <SubType>Content</SubType>
       <type>file</type>
       <deletable>true</deletable>
-      <hash>f749fd4a</hash>
+      <hash>f9a97128</hash>
       <icon>
       </icon>
       <mime>
@@ -896,7 +896,7 @@
       <path>/www/js/app.js</path>
       <remark>
       </remark>
-      <lastModified>636135248546746827</lastModified>
+      <lastModified>636135961178705164</lastModified>
     </Content>
     <Content Include="www\js\topmenu.js">
       <SubType>Content</SubType>
